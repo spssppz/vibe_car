@@ -1011,6 +1011,21 @@ body::after {
   position: relative;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: 31.3125rem;
+  height: 43.8125rem;
+  background: #395573;
+  bottom: -6.25rem;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-filter: blur(12.5rem);
+          filter: blur(12.5rem);
+  right: -16.875rem;
+}
+
 .hero__title {
   font-size: 2.8125rem;
   font-weight: 700;
@@ -1619,6 +1634,21 @@ body::after {
   position: relative;
 }
 
+.team::after {
+  content: "";
+  position: absolute;
+  width: 31.3125rem;
+  top: 0;
+  left: -8.75rem;
+  z-index: -1;
+  pointer-events: none;
+  height: 43.8125rem;
+  border-radius: 100%;
+  background: #395573;
+  -webkit-filter: blur(12.5rem);
+          filter: blur(12.5rem);
+}
+
 .team__title:not(:last-child) {
   margin-bottom: 3.9375rem;
 }
@@ -1730,39 +1760,9 @@ body::after {
 }
 
 @media (min-width: 61.99875em) {
-  .hero::after {
-    content: "";
-    position: absolute;
-    border-radius: 100%;
-    width: 31.3125rem;
-    height: 43.8125rem;
-    background: #395573;
-    bottom: -6.25rem;
-    z-index: -1;
-    pointer-events: none;
-    -webkit-filter: blur(12.5rem);
-            filter: blur(12.5rem);
-    right: -16.875rem;
-  }
-
   .lots__body {
     position: relative;
     padding: 0rem 4.375rem;
-  }
-
-  .team::after {
-    content: "";
-    position: absolute;
-    width: 31.3125rem;
-    top: 0;
-    left: -8.75rem;
-    z-index: -1;
-    pointer-events: none;
-    height: 43.8125rem;
-    border-radius: 100%;
-    background: #395573;
-    -webkit-filter: blur(9.375rem);
-            filter: blur(9.375rem);
   }
 
   .team__body {
