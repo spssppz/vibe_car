@@ -288,12 +288,6 @@ textarea.input {
   position: absolute;
 }
 
-.options__input:checked + .options__label:after {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
 .options__label {
   cursor: pointer;
   gap: 0.625rem;
@@ -343,7 +337,6 @@ textarea.input {
 
 .options__label.active {
   border-color: #8bffdc;
-  border-color: red;
 }
 
 .options__label_fuel {
@@ -379,6 +372,10 @@ textarea.input {
   height: 1.4375rem;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #8bffdc;
+}
+
+.active .options__text::before {
+  background: #8bffdc url("../img/icons/check.svg") 50% no-repeat;
 }
 
 .options__image {
@@ -1021,9 +1018,33 @@ body::after {
   bottom: -6.25rem;
   z-index: -1;
   pointer-events: none;
-  -webkit-filter: blur(12.5rem);
-          filter: blur(12.5rem);
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
   right: -16.875rem;
+}
+
+.hero__decor {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 135rem;
+  pointer-events: none;
+  z-index: -1;
+  background: url("../img/hero/line-1.svg") 50%/100% no-repeat;
+}
+
+.hero__decor_1 {
+  width: 135rem;
+  height: 40.3125rem;
+}
+
+.hero__decor_2 {
+  background-image: url("../img/hero/line-2.svg");
+  height: 61.625rem;
+  top: 8%;
 }
 
 .hero__title {
@@ -1109,10 +1130,6 @@ body::after {
   height: 6.75rem;
   left: 2rem;
   bottom: calc(100% + 1.9375rem);
-}
-
-.descr-hero:not(:last-child) {
-  margin-bottom: 1.9375rem;
 }
 
 .descr-hero__label {
@@ -1645,8 +1662,8 @@ body::after {
   height: 43.8125rem;
   border-radius: 100%;
   background: #395573;
-  -webkit-filter: blur(12.5rem);
-          filter: blur(12.5rem);
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
 }
 
 .team__title:not(:last-child) {
@@ -1831,7 +1848,7 @@ body::after {
             flex: 0 0 38.5625rem;
     width: 38.5625rem;
     margin-left: -7.5rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.1875rem;
   }
 
   .team__image {
@@ -1860,6 +1877,7 @@ body::after {
 
   .options__label {
     padding: 0.9375rem;
+    border-radius: 0.9375rem;
   }
 
   .options__label_text {
@@ -1994,6 +2012,19 @@ body::after {
     padding: 2.5rem 0rem;
   }
 
+  .hero__decor {
+    top: 5%;
+  }
+
+  .hero__decor_1 {
+    width: 67.5rem;
+    height: 20.125rem;
+  }
+
+  .hero__decor_2 {
+    height: 61rem;
+  }
+
   .hero__title {
     font-size: 2.25rem;
   }
@@ -2003,7 +2034,7 @@ body::after {
   }
 
   .hero__btn-wrapper {
-    margin-bottom: 6.25rem;
+    margin-bottom: 2.6875rem;
   }
 
   .hero__image {
@@ -2011,7 +2042,7 @@ body::after {
         -ms-flex: auto;
             flex: auto;
     width: auto;
-    margin-left: -4.375rem;
+    margin-left: -5.625rem;
   }
 
   .descr-hero {
@@ -2105,6 +2136,7 @@ body::after {
   .options__label {
     min-height: 6.9375rem;
     padding: 0.625rem;
+    border-radius: 0.6875rem;
   }
 
   .options__label_text {
