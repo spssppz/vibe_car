@@ -1021,6 +1021,8 @@ body::after {
   -webkit-filter: blur(200px);
           filter: blur(200px);
   right: -16.875rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .hero__decor {
